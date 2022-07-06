@@ -1,15 +1,18 @@
 # -*- coding: utf-8 -*-
 
+
 def test_machinery(fake, machinery):
     assert len(machinery) > 1
     v = machinery[0]
-    assert 'Make' in v.keys()
-    assert 'Model' in v.keys()
+    assert "Make" in v.keys()
+    assert "Model" in v.keys()
+
 
 def test_make(fake, machine_makes):
     make = fake.machine_make()
     assert len(make) > 1
     assert make in machine_makes
+
 
 def test_year(fake, machine_years):
     year = fake.machine_year()
@@ -22,15 +25,18 @@ def test_model(fake, machine_models):
     assert len(model) >= 1
     assert model in machine_models
 
+
 def test_category(fake, machine_categories):
     category = fake.machine_category()
     assert len(category) > 1
     assert category in machine_categories
 
+
 def test_machine_make_model(fake):
     ar_mm = fake.machine_make_model().split()
     # check to see if there are 2 words
     assert len(ar_mm) >= 1
+
 
 def test_machine_year_make_model(fake):
     ar_ymm = fake.machine_year_make_model().split()

@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 
+
 def test_vehicles(fake, vehicles):
     assert len(vehicles) > 1
     v = vehicles[0]
-    assert 'Make' in v.keys()
-    assert 'Model' in v.keys()
+    assert "Make" in v.keys()
+    assert "Model" in v.keys()
 
 
 def test_make(fake, makes):
